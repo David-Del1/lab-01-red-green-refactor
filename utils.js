@@ -1,4 +1,4 @@
-export default (obj) => {
+export default ({ name }) => {
 
-  return obj.name;
+  return name;
 };
