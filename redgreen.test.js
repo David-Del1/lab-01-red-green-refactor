@@ -6,7 +6,7 @@ describe('red/green refactor', () => {
     const spot = { name: 'spot', age: 5, weight: '20 lbs' };
     getName(spot);
 
-    expect(getName(spot)).toEqual('spot');
+    expect(getName(spot.name)).toEqual('spot');
   });
 
   it('returns name Aang', () => {
@@ -16,7 +16,7 @@ describe('red/green refactor', () => {
     };
     getName(character);
 
-    expect(getName(character)).toEqual('Aang');
+    expect(getName(character.name)).toEqual('Aang');
   });
 
 
