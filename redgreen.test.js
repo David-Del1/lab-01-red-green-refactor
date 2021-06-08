@@ -1,4 +1,4 @@
-import getName from './utils.js';
+import getName, { capitalizeAndFilter } from './utils.js';
 import { copyAndPush }from './utils.js';
 
 describe('red/green refactor', () => {
@@ -34,4 +34,12 @@ describe('copy and push function', () => {
   });
 
 
+});
+
+describe('Capitalize and push', () => {
+  it('Capitalizes all strings and filters out F/f', () => {
+    const array = ['coffee', 'milk', 'bread', 'french toast', 'buns', 'french fries'];
+
+    expect(capitalizeAndFilter(array)).toEqual(['COFFEE', 'MILK', 'BREAD', 'BUNS']);
+  });
 });
