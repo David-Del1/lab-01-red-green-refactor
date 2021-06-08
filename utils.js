@@ -4,6 +4,7 @@ export default (obj) => {
 };
 
 export function copyAndPush(arr, item)  {
-  arr.push(item);
-  return arr;
+  const newArray = [...arr];
+  newArray.push(item);
+  return [arr, newArray];
 }

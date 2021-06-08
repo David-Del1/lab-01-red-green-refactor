@@ -27,10 +27,11 @@ describe('copy and push function', () => {
 
   it('returns a new array with all original items plus new item pushed to end', () => {
     const numbers = [1, 2, 3];
+    const newNumbers = copyAndPush(numbers, 4);
     // copyAndPush(numbers, 4);
 
-    expect(copyAndPush(numbers, 4)).toEqual([1, 2, 3, 4]);
+    expect(newNumbers).toEqual([numbers, [1, 2, 3, 4]]);
   });
 
-});
 
+});
