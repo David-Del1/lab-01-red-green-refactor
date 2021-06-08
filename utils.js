@@ -11,14 +11,14 @@ export function copyAndPush(arr, item)  {
 }
 
 export function capitalizeAndFilter(arr) {
-  const finalArray = [];
-  const newArray = arr.map(word => word.toUpperCase());
-
-  for(let i = 0; i < newArray.length; i++) {
-    if(newArray[i][0] !== 'F') {
-      finalArray.push(newArray[i]);
+  
+  const newArray = [];
+  arr.map(word => {
+    if(word[0] !== 'f') {
+      newArray.push(word.toUpperCase()); 
     }
-  }
-  return finalArray;
+  });
+  
+  return newArray;
   
 }

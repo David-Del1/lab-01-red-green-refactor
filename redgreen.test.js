@@ -1,5 +1,5 @@
 import getName, { capitalizeAndFilter } from './utils.js';
-import { copyAndPush }from './utils.js';
+import { copyAndPush } from './utils.js';
 
 describe('red/green refactor', () => {
 
