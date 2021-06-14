@@ -1,4 +1,4 @@
-import getName, { capitalizeAndFilter } from './utils.js';
+import getName, { capitalizeAndFilter, fetchQuotes } from './utils.js';
 import { copyAndPush } from './utils.js';
 
 describe('red/green refactor', () => {
@@ -41,5 +41,15 @@ describe('Capitalize and push', () => {
     const array = ['coffee', 'milk', 'bread', 'french toast', 'buns', 'french fries'];
 
     expect(capitalizeAndFilter(array)).toEqual(['COFFEE', 'MILK', 'BREAD', 'BUNS']);
+  });
+});
+
+describe('fetch quotes', () => {
+  it('returns a single quote in appropriate format', async () => {
+    const quote = await fetchQuotes();
+    console.log(quote);
+    expect(quote).toEqual({ 'image': 'https://res.cloudinary.com/dzxqhkyqd/image/fetch/c_scale,w_500/https://res.cloudinary.com/dzxqhkyqd/image/upload/v1552429540/bender.png', 'name': 'Bender', 'text': 'Bite my shiny metal ass.' });
+
+
   });
 });
